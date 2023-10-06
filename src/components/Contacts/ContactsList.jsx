@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-
-import { useVisibleContacts } from 'components/hooks/useVisibleContacts';
+// import { useVisibleContacts } from 'components/hooks/useVisibleContacts';
 import { ContactItem } from './Contact';
+import { selectVisibleContacts } from 'redux/selectors';
+import { useSelector } from 'react-redux';
 
 
 
@@ -10,7 +11,7 @@ const Contacts = () => {
   
    
   
-    const filteredContacts = useVisibleContacts()
+    const filteredContacts = useSelector(selectVisibleContacts)
     
  
 
